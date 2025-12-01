@@ -1,2 +1,15 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using TesteTecnicoTarget.Utilidades;
+
+class Program
+{
+    static void Main()
+    {
+        ExibirMenu();
+    }
+
+    static void ExibirMenu()
+    {
+        MenuHelper.ExibirTitulo("Estoque");
+
+    }
+}
