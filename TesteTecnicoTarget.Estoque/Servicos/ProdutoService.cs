@@ -14,13 +14,13 @@ internal class ProdutoService
     private readonly List<Movimentacao> movimentacoes = new();
     public IReadOnlyList<Movimentacao> Movimentacoes => movimentacoes;
 
-    private int sequenciaMovimentacao = 1;
+    private int sequenciaMovimentacao = 0;
 
     /// <summary>
     /// Altera a sequência da próxima movimentação.
     /// </summary>
     /// <returns></returns>
-    public void ProximoId() => ++sequenciaMovimentacao;
+    public int ProximoId() => ++sequenciaMovimentacao;
 
     /// <summary>
     /// Retorna um produto pelo código, ou null se não existir.
@@ -81,7 +81,7 @@ internal class ProdutoService
 
         movimentacoes.Add(new Movimentacao
         {
-            IdMovimentacao = sequenciaMovimentacao,
+            IdMovimentacao = ProximoId(),
             CodigoProduto = produto.Codigo,
             Tipo = TipoMovimentacao.SAIDA,
             Quantidade = quantidade

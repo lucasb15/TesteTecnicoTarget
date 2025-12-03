@@ -92,7 +92,6 @@ internal class Manual
             if (entrada)
             {
                 sucesso = service.AdicionarProduto(produto, quantidade);
-                service.ProximoId();
             }
             else
             {

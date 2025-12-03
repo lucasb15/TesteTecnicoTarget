@@ -84,8 +84,6 @@ internal class Importado
                 );
             }
         }
-        service.ProximoId();
-
         Console.WriteLine("\nProcesso de importação concluído!");
         Console.WriteLine("Pressione qualquer tecla para continuar...");
         Console.ReadKey();
