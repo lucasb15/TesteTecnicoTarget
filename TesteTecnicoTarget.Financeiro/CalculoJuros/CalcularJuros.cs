@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TesteTecnicoTarget.Utilidades;
 
 namespace TesteTecnicoTarget.Financeiro.CalculoJuros;
 
@@ -13,13 +14,7 @@ internal class CalcularJuros
     {
         Console.Clear();
         string titulo = usarJurosPadrao ? "Cálculo de Juros Padrão" : "Cálculo de Juros Personalizados";
-        Console.WriteLine(titulo);
-        for (int i = 0; i < titulo.Length; i++)
-        {
-            Console.Write("-");
-        }
-
-        Console.WriteLine();
+        MenuHelper.ExibirTitulo(titulo);
 
         Console.Write("Digite o valor do titulo: ");
 

@@ -28,9 +28,9 @@ internal class Vendedor
         if (valorVenda < 0) throw new ArgumentOutOfRangeException(nameof(valorVenda));
 
         decimal valorComissao = 0;
-        if (valorVenda > 500)
+        if (valorVenda >= 500)
             valorComissao = valorVenda * (5 / 100m); // Valor de comissão 5%
-        else if (valorVenda > 100)
+        else if (valorVenda >= 100)
             valorComissao = valorVenda * (1 / 100m); // Valor de comissão 1%
 
         vendas.Add(new Venda(this, valorVenda, valorComissao));

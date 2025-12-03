@@ -12,27 +12,29 @@ internal class ImportarVendas
 {
     public static void Executar()
     {
-        Console.Clear();
-        MenuHelper.ExibirTitulo("Importar Vendas");
-        Console.WriteLine("1 - Lançamento manual");
-        Console.WriteLine("2 - Importar de arquivo JSON");
-        Console.WriteLine("0 - Voltar ao menu principal");
-        var opcao = MenuHelper.LerOpcao();
-        switch (opcao)
+        while(true)
         {
-            case 1:
-                LancamentoManual();
-                break;
-            case 2:
-                ImportarDados();
-                break;
-            case 0:
-                return;
-            default:
-                Console.WriteLine("Opção inválida. Retornando ao menu principal.");
-                break;
+            Console.Clear();
+            MenuHelper.ExibirTitulo("Importar Vendas");
+            Console.WriteLine("1 - Lançamento manual");
+            Console.WriteLine("2 - Importar de arquivo JSON");
+            Console.WriteLine("0 - Voltar ao menu principal");
+            var opcao = MenuHelper.LerOpcao();
+            switch (opcao)
+            {
+                case 1:
+                    LancamentoManual();
+                    break;
+                case 2:
+                    ImportarDados();
+                    break;
+                case 0:
+                    return;
+                default:
+                    Console.WriteLine("Opção inválida. Tente novamente.");
+                    break;
+            }
         }
-
     }
 
     public static void LancamentoManual()
